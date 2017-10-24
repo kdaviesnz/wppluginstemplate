@@ -1,0 +1,12 @@
+{
+    "name": ":vendor/template",
+    "type": "library",
+    "description": ":package_description",
+    "keywords": [
+        ":vendor",
+        ":package_name"
+    ],
+    "require": {
+        "php" : "~7.0"
+    }
+}
