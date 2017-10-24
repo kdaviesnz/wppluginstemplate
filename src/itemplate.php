@@ -6,7 +6,7 @@ interface ITemplate
 {
     public function admin(): bool;
     public function init();
-    public function metaBoxes();
+    public function metaBoxes( string $screen );
     public function addTemplatePageType();
     public function foot();
     public function head();

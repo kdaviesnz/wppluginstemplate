@@ -14,4 +14,7 @@ interface ITemplateView
     public static function renderEditPostNotice() :Callable;
     public static function renderAllPagesNotice() :Callable;
     public static function renderAllPostsNotice() :Callable;
+    public static function addPostsTableColumnHeader() :Callable;
+    public static function addPostsTableColumnContent() :Callable;
+
 }

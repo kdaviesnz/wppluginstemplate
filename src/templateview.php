@@ -169,4 +169,17 @@ class TemplateView implements ITemplateView
 			<?php
 		};
 	}
+
+	public static function addPostsTableColumnHeader() :Callable {
+        return function( array $defaults ) {
+            $defaults["Template column"] = "Template Column";
+            return $defaults;
+        };
+    }
+
+    public static function addPostsTableColumnContent() :Callable {
+        return function( string $column_name, int $post_ID ) {
+            echo "Template column content";
+        };
+    }
 }

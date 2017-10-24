@@ -86,7 +86,7 @@ class Template implements ITemplate
 			$this->addTemplatePageType();
 
 			// Meta boxes.
-			add_action( 'add_meta_boxes', $this->metaBoxes() );
+			add_action( 'add_meta_boxes', $this->metaBoxes( "post" ) );
 
 			// Save post handler.
 			add_action(
@@ -165,6 +165,10 @@ class Template implements ITemplate
 				add_action( 'admin_notices', TemplateView::renderPluginsNotice() );
 			}
 		});
+
+		// Tables
+        add_filter( 'manage_posts_columns', TemplateView::addPostsTableColumnHeader() );
+        add_action( 'manage_posts_custom_column', TemplateView::addPostsTableColumnContent(), 10, 2 );
 
 		return true;
 	}
@@ -288,14 +292,14 @@ class Template implements ITemplate
 	/**
 	 * Render setting fields on the template page.
 	 */
-	public function metaBoxes() {
-		return function (){
+	public function metaBoxes( string $screen ) {
+		return function () use ($screen) {
 			// Ref: https://developer.wordpress.org/reference/functions/add_meta_box/.
 			add_meta_box(
 				'template_settings',
 				'Template Settings',
 				TemplateView::renderMetaboxes(),
-				'post',
+				$screen,
 				'normal',
 				'high'
 			);
