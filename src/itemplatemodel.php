@@ -7,3 +7,4 @@ interface ITemplateModel
 {
     public static function savePost(): Callable;
 }
+

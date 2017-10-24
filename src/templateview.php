@@ -65,109 +65,108 @@ class TemplateView implements ITemplateView
 		};
 	}
 
-    /**
-     * Notice to appear on Plugins page.
-     *
-     * @return Callable
-     */
-    public static function renderPluginsNotice(): Callable
-    {
-        return function () {
-            ?>
-            <div class="notice notice-info is-dismissible">
-                <h4>Notice to appear on plugins page</h4>
-                <p>
-                    <?php esc_html_e(
-                        'Description',
-                        'template'
-                    ); ?>
-                </p>
-            </div>
-            <?php
-        };
-    }
+	/**
+	 * Notice to appear on Plugins page.
+	 *
+	 * @return Callable
+	 */
+	public static function renderPluginsNotice() :Callable {
+		return function () {
+			?>
+			<div class="notice notice-info is-dismissible">
+				<h4>Notice to appear on plugins page</h4>
+				<p>
+					<?php esc_html_e(
+						'Description',
+						'template'
+					); ?>
+				</p>
+			</div>
+			<?php
+		};
+	}
 
-    /**
-     * Notice to appear on Edit Page page.
-     *
-     * @return Callable
-     */
-    public static function renderEditPageNotice() :Callable {
-	    return function () {
-            ?>
-            <div class="notice notice-info">
-                <h4>Notice to appear on edit single page page.</h4>
-                <p>
-                    <?php esc_html_e(
-                        'Description',
-                        'template'
-                    ); ?>
-                </p>
-            </div>
-            <?php
-        };
-    }
+	/**
+	 * Notice to appear on Edit Page page.
+	 *
+	 * @return Callable
+	 */
+	public static function renderEditPageNotice() :Callable {
+		return function () {
+			?>
+			<div class="notice notice-info">
+				<h4>Notice to appear on edit single page page.</h4>
+				<p>
+					<?php esc_html_e(
+						'Description',
+						'template'
+					); ?>
+				</p>
+			</div>
+			<?php
+		};
+	}
 
-    /**
-     * Notice to appear on Edit Post page.
-     *
-     * @return Callable
-     */
-    public static function renderEditPostNotice() :Callable {
-	    return function () {
-            ?>
-            <div class="notice notice-info">
-                <h4>Notice to appear on edit single post page.</h4>
-                <p>
-                    <?php esc_html_e(
-                        'Description',
-                        'template'
-                    ); ?>
-                </p>
-            </div>
-            <?php
-        };
-    }
+	/**
+	 * Notice to appear on Edit Post page.
+	 *
+	 * @return Callable
+	 */
+	public static function renderEditPostNotice() :Callable {
+		return function () {
+			?>
+			<div class="notice notice-info">
+				<h4>Notice to appear on edit single post page.</h4>
+				<p>
+					<?php esc_html_e(
+						'Description',
+						'template'
+					); ?>
+				</p>
+			</div>
+			<?php
+		};
+	}
 
-    /**
-     * Notice to appear on All Pages page.
-     *
-     * @return Callable
-     */
-    public static function renderAllPagesNotice() :Callable {
-	    return function () {
-            ?>
-            <div class="notice notice-info">
-                <h4>Notice to appear on all pages page</h4>
-                <p>
-                    <?php esc_html_e(
-                        'Description',
-                        'template'
-                    ); ?>
-                </p>
-            </div>
-            <?php
-        };
-    }
+	/**
+	 * Notice to appear on All Pages page.
+	 *
+	 * @return Callable
+	 */
+	public static function renderAllPagesNotice() :Callable {
+		return function () {
+			?>
+			<div class="notice notice-info">
+				<h4>Notice to appear on all pages page</h4>
+				<p>
+					<?php esc_html_e(
+						'Description',
+						'template'
+					); ?>
+				</p>
+			</div>
+			<?php
+		};
+	}
 
-    /**
-     * Notice to appear on All Posts page.
-     *
-     * @return Callable
-     */
-    public static function renderAllPostsNotice() :Callable {
-	    return function () {
-            ?>
-            <div class="notice notice-info">
-                <h4>Notice to appear on all posts page</h4>
-                <p>
-                    <?php esc_html_e(
-                        'Description',
-                        'template'
-                    ); ?>
-                </p>
-            </div>
-            <?php
-        };
-    }
+	/**
+	 * Notice to appear on All Posts page.
+	 *
+	 * @return Callable
+	 */
+	public static function renderAllPostsNotice() :Callable {
+		return function () {
+			?>
+			<div class="notice notice-info">
+				<h4>Notice to appear on all posts page</h4>
+				<p>
+					<?php esc_html_e(
+						'Description',
+						'template'
+					); ?>
+				</p>
+			</div>
+			<?php
+		};
+	}
 }
