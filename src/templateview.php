@@ -65,7 +65,12 @@ class TemplateView implements ITemplateView
 		};
 	}
 
-	public static function renderPluginsNotice(): Callable
+    /**
+     * Notice to appear on Plugins page.
+     *
+     * @return Callable
+     */
+    public static function renderPluginsNotice(): Callable
     {
         return function () {
             ?>
@@ -82,6 +87,11 @@ class TemplateView implements ITemplateView
         };
     }
 
+    /**
+     * Notice to appear on Edit Page page.
+     *
+     * @return Callable
+     */
     public static function renderEditPageNotice() :Callable {
 	    return function () {
             ?>
@@ -98,6 +108,11 @@ class TemplateView implements ITemplateView
         };
     }
 
+    /**
+     * Notice to appear on Edit Post page.
+     *
+     * @return Callable
+     */
     public static function renderEditPostNotice() :Callable {
 	    return function () {
             ?>
@@ -114,6 +129,11 @@ class TemplateView implements ITemplateView
         };
     }
 
+    /**
+     * Notice to appear on All Pages page.
+     *
+     * @return Callable
+     */
     public static function renderAllPagesNotice() :Callable {
 	    return function () {
             ?>
@@ -130,6 +150,11 @@ class TemplateView implements ITemplateView
         };
     }
 
+    /**
+     * Notice to appear on All Posts page.
+     *
+     * @return Callable
+     */
     public static function renderAllPostsNotice() :Callable {
 	    return function () {
             ?>
